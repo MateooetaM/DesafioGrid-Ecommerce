@@ -5,6 +5,7 @@
     --bg: #ccc;
     --title: #000e3a;
     --text: #000;
+    --category: #1f1f1f;
     --white: #fff;
     --font: "Open Sans", sans-serif;
 }
@@ -45,4 +46,31 @@ a {
 
 .main-menu a {
     color: var(--white);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--bg);
+    padding: 2rem;
+    grid-area: aside;
+
+}
+
+aside .widget h3 {
+    margin-bottom: 0.5rem;
+    color: var(--title);
+}
+
+aside .widget ul {
+    list-style: none;
+}
+
+aside .widget a {
+    color: var(--category);
+}
+
+aside .widget a:hover {
+    text-decoration: underline;
 }
