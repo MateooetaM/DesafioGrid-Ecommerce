@@ -27,10 +27,10 @@ a {
 
 #root {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-areas:
         'nav nav'
-        'aside article'
+        'aside section'
         'footer footer'
     ;
 }
@@ -73,4 +73,52 @@ aside .widget a {
 
 aside .widget a:hover {
     text-decoration: underline;
+}
+
+.related-posts {
+    padding: 2rem;
+    grid-area: section;
+    background: var(--bg);
+}
+
+.related-posts .card p {
+    padding: 0.5rem;
+}
+
+.post-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.related-posts .card {
+    text-align: center;
+    background-color: var(--white);
+}
+
+.related-posts .card button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.25rem;
+    background-color: var(--nav);
+    color: var(--white);
+    border: none;
+}
+
+.related-posts .card button:hover {
+    text-decoration: underline;
+}
+
+.related-posts .card a {
+    color: var(--title);
+}
+
+.related-posts .card a:hover {
+    color: var(--category);
+}
+
+.related-posts .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
