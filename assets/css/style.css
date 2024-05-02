@@ -2,6 +2,7 @@
 
 :root {
     --nav: #29324d;
+    --border: #ced4fa;
     --bg: #ebebeb;
     --title: #000e3a;
     --text: #000;
@@ -27,7 +28,7 @@ a {
 
 #root {
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 7fr;
     grid-template-areas:
         'nav nav'
         'aside section'
@@ -52,7 +53,10 @@ a {
 aside {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-right: 1px solid var(--border);
+    height: 150vh;
     background: var(--bg);
     padding: 2rem;
     grid-area: aside;
@@ -66,6 +70,7 @@ aside .widget h3 {
 
 aside .widget ul {
     list-style: none;
+    margin-bottom: 0.5rem;
 }
 
 aside .widget a {
@@ -82,19 +87,31 @@ aside .widget a:hover {
     background: var(--bg);
 }
 
+.post-gallery {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.7rem 1rem;
+    
+}
+
+.related-posts .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    background-color: var(--white);
+}
+
 .related-posts .card p {
     padding: 0.5rem;
 }
 
-.post-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-}
-
-.related-posts .card {
-    text-align: center;
-    background-color: var(--white);
+.related-posts .title-section {
+    color: var(--title);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .related-posts .card button {
